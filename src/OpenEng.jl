@@ -28,8 +28,24 @@ module OpenEng
 using LinearAlgebra
 using Statistics
 
+# Read version from Project.toml
+function _get_version()
+    project_toml = joinpath(dirname(@__DIR__), "Project.toml")
+    if isfile(project_toml)
+        for line in eachline(project_toml)
+            if startswith(line, "version")
+                m = match(r"version\s*=\s*\"(.+)\"", line)
+                if m !== nothing
+                    return VersionNumber(m.captures[1])
+                end
+            end
+        end
+    end
+    return v"0.1.0"  # fallback version
+end
+
 # Version information
-const VERSION = v"0.1.0"
+const VERSION = _get_version()
 
 # Export main functionality
 export greet
