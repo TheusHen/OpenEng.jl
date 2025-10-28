@@ -46,13 +46,13 @@ t, y = step_response(sys, 5.0)
 
 OpenEng.jl is organized into specialized modules:
 
-- **[LA (LinearAlgebra)](@ref)**: Advanced linear algebra operations
-- **[Simulation](@ref)**: ODE/PDE solvers and control systems
-- **[Signal](@ref)**: Signal and image processing
-- **[Optimization](@ref)**: Linear and nonlinear optimization
-- **[Viz](@ref)**: Visualization and plotting
-- **[GPU](@ref)**: GPU-accelerated computing
-- **[Utils](@ref)**: Utilities and I/O operations
+- **[Linear Algebra](linear_algebra.md)**: Advanced linear algebra operations
+- **[Simulation](simulation.md)**: ODE/PDE solvers and control systems
+- **[Signal Processing](signal.md)**: Signal and image processing
+- **[Optimization](optimization.md)**: Linear and nonlinear optimization
+- **[Visualization](viz.md)**: Visualization and plotting
+- **[GPU Computing](gpu.md)**: GPU-accelerated computing
+- **[Utilities](utils.md)**: Utilities and I/O operations
 
 ## Getting Help
 
